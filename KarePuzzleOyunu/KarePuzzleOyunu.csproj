@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmGirisEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmGirisEkrani.Designer.cs">
+      <DependentUpon>FrmGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOyunEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOyunEkrani.Designer.cs">
+      <DependentUpon>FrmOyunEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmGirisEkrani.resx">
+      <DependentUpon>FrmGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOyunEkrani.resx">
+      <DependentUpon>FrmOyunEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
