@@ -1,0 +1,12 @@
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\bin\Debug\KarePuzzleOyunu.exe.config
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\bin\Debug\KarePuzzleOyunu.exe
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\bin\Debug\KarePuzzleOyunu.pdb
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.csproj.AssemblyReference.cache
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.csproj.SuggestedBindingRedirects.cache
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.FrmGirisEkrani.resources
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.FrmOyunEkrani.resources
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.Properties.Resources.resources
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.csproj.GenerateResource.cache
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.csproj.CoreCompileInputs.cache
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.exe
+C:\Users\ylmzo\Desktop\KarePuzzleOyunu-master\KarePuzzleOyunu\obj\Debug\KarePuzzleOyunu.pdb
