@@ -54,12 +54,14 @@ namespace KarePuzzleOyunu
             this.lblPuan = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNameSurname = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.btnKapat);
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
@@ -80,22 +82,24 @@ namespace KarePuzzleOyunu
             // 
             // btnGorselEkle
             // 
+            this.btnGorselEkle.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGorselEkle.Location = new System.Drawing.Point(12, 169);
             this.btnGorselEkle.Name = "btnGorselEkle";
             this.btnGorselEkle.Size = new System.Drawing.Size(246, 62);
             this.btnGorselEkle.TabIndex = 2;
             this.btnGorselEkle.Text = "Görsel Ekle";
-            this.btnGorselEkle.UseVisualStyleBackColor = true;
+            this.btnGorselEkle.UseVisualStyleBackColor = false;
             this.btnGorselEkle.Click += new System.EventHandler(this.btnGorselEkle_Click);
             // 
             // btnKaristir
             // 
+            this.btnKaristir.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnKaristir.Location = new System.Drawing.Point(12, 237);
             this.btnKaristir.Name = "btnKaristir";
             this.btnKaristir.Size = new System.Drawing.Size(246, 62);
             this.btnKaristir.TabIndex = 3;
             this.btnKaristir.Text = "Karıştır";
-            this.btnKaristir.UseVisualStyleBackColor = true;
+            this.btnKaristir.UseVisualStyleBackColor = false;
             this.btnKaristir.Click += new System.EventHandler(this.btnKaristir_Click);
             // 
             // button1
@@ -261,43 +265,61 @@ namespace KarePuzzleOyunu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 338);
+            this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(99, 308);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(86, 29);
             this.label1.TabIndex = 20;
             this.label1.Text = "Puan: ";
             // 
             // lblPuan
             // 
             this.lblPuan.AutoSize = true;
-            this.lblPuan.Location = new System.Drawing.Point(77, 338);
+            this.lblPuan.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lblPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPuan.Location = new System.Drawing.Point(179, 308);
             this.lblPuan.Name = "lblPuan";
-            this.lblPuan.Size = new System.Drawing.Size(46, 17);
+            this.lblPuan.Size = new System.Drawing.Size(79, 29);
             this.lblPuan.TabIndex = 21;
             this.lblPuan.Text = "label2";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(9, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 22;
             this.label2.Text = "Oyuncu: ";
             // 
             // lblNameSurname
             // 
             this.lblNameSurname.AutoSize = true;
-            this.lblNameSurname.Location = new System.Drawing.Point(77, 95);
+            this.lblNameSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNameSurname.Location = new System.Drawing.Point(111, 95);
             this.lblNameSurname.Name = "lblNameSurname";
-            this.lblNameSurname.Size = new System.Drawing.Size(46, 17);
+            this.lblNameSurname.Size = new System.Drawing.Size(70, 25);
             this.lblNameSurname.TabIndex = 23;
             this.lblNameSurname.Text = "label3";
+            // 
+            // button17
+            // 
+            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button17.Location = new System.Drawing.Point(0, -3);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(83, 64);
+            this.button17.TabIndex = 1;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // FrmOyunEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1140, 691);
             this.Controls.Add(this.lblNameSurname);
             this.Controls.Add(this.label2);
@@ -360,5 +382,6 @@ namespace KarePuzzleOyunu
         private System.Windows.Forms.Label lblPuan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNameSurname;
+        private System.Windows.Forms.Button button17;
     }
 }

@@ -45,7 +45,7 @@ namespace KarePuzzleOyunu
 
         public void resimSec()
         {
-            String imageLocation = "";
+            String imageLocation = ""; //Yüklenen görsel yolunu tutacak değişkenin tanımlanması
 
             Random rnd = new Random();
 
@@ -209,13 +209,20 @@ namespace KarePuzzleOyunu
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void btnKapat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Kapama butonu
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            FrmGirisEkrani frmGirisEkrani = new FrmGirisEkrani();
+            frmGirisEkrani.Show();
+            this.Hide();
         }
     }
 }
