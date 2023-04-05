@@ -78,13 +78,13 @@ namespace KarePuzzleOyunu
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(11, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 39);
+            this.label2.Size = new System.Drawing.Size(329, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Kare Yapboz Oyunu";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(1, 0);
@@ -107,9 +107,10 @@ namespace KarePuzzleOyunu
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(811, 368);
+            this.label3.Location = new System.Drawing.Point(789, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 29);
             this.label3.TabIndex = 5;
@@ -118,8 +119,9 @@ namespace KarePuzzleOyunu
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(812, 397);
+            this.label4.Location = new System.Drawing.Point(790, 393);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 20);
             this.label4.TabIndex = 6;
@@ -128,8 +130,9 @@ namespace KarePuzzleOyunu
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(812, 417);
+            this.label5.Location = new System.Drawing.Point(790, 413);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 20);
             this.label5.TabIndex = 7;
@@ -137,11 +140,11 @@ namespace KarePuzzleOyunu
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtAdSoyad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(37, 121);
+            this.groupBox1.Location = new System.Drawing.Point(559, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(347, 231);
             this.groupBox1.TabIndex = 8;
@@ -153,6 +156,8 @@ namespace KarePuzzleOyunu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(994, 446);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);

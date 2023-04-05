@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace KarePuzzleOyunu
 {
@@ -19,10 +20,71 @@ namespace KarePuzzleOyunu
             lblNameSurname.Text = nameSurname; //Oyuncu ad-soyad bilgisini başlangıç ekranından parametreyle alıp labela bastırıyoruz
         }
 
+        DataTable dt = new DataTable();
         private void FrmOyunEkrani_Load(object sender, EventArgs e)
         {
             lblPuan.Text = puan.ToString(); //Oyun açıldığınında puan olayı başlar
             btnKaristir.Enabled = false;   //Karıştır butonu oyun ilk açıldığında pasif durur
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
+            button10.Text = "";
+            button11.Text = "";
+            button12.Text = "";
+            button13.Text = "";
+            button14.Text = "";
+            button15.Text = "";
+            button16.Text = ""; //Butonların arkasındaki yazılar silinir
+
+            string dosya_yolu = "C:\\Users\\rcp74\\Desktop\\KarePuzzleOyunu-master\\KarePuzzleOyunu\\enyuksekskor.txt"; //Dosya yolu tutulur
+            if (!File.Exists(dosya_yolu))
+            {
+                File.Create(dosya_yolu).Close();
+
+            }
+
+            string[] lines = File.ReadAllLines(@"C:\\Users\\rcp74\\Desktop\\KarePuzzleOyunu-master\\KarePuzzleOyunu\\enyuksekskor.txt");
+            string[] points;
+            if (lines.Length > 0) //Txt dosyasına kayıt varsa içlerinden en büyüğünü aramaya koyulur
+
+                label8.Text = lines.Max();
+            int maxPuan =0;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                
+                points = lines[i].ToString().Substring(0, 3).Split('/');
+                if (Convert.ToInt32(points.Max()) > maxPuan)
+                {
+                    maxPuan = Convert.ToInt32(points.Max());
+                }
+                label8.Text = maxPuan.ToString();
+            }
+
+            dt.Columns.Add("Puan", typeof(int));
+            dt.Columns.Add("Oyuncu",typeof(string));
+            dt.Columns.Add("Hamle",typeof(int));
+            dataGridView1.DataSource = dt;
+
+            string[] values;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('/');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim().ToString();
+                }
+                dt.Rows.Add(row);
+            }
+            
         }
 
         LinkedList<Image> ListOfObjects = new LinkedList<Image>();   //Görsellerin orijinal sırasını içerisinde tutacak bağlı liste
@@ -115,6 +177,8 @@ namespace KarePuzzleOyunu
 
         public void parcalariKaristir()
         {
+            timer1.Start();
+            timer1.Interval = 1;
             buttons = new Button[] { button1, button5, button9,  button13,
                                      button2, button6, button10, button14,
                                      button3, button7, button11, button15,
@@ -137,7 +201,7 @@ namespace KarePuzzleOyunu
                 item.BackgroundImage = imgarray[sira]; //Butona görselin basımı
                 if (!debug)
                 {
-                    item.Text = "";      //Buton arkası yazılan silinir
+                    item.Text = "";      //Buton arkası yazılar silinir
                     item.Enabled = true; //Görsel karıştırıldıktan sonra her buton aktif
                 }
                 rasgele_sayi_sayisi += 1;
@@ -148,6 +212,7 @@ namespace KarePuzzleOyunu
         Button btn2;
         int puan = 0;
         int btn_sayac = 0;
+        int hamle = 0;
         private void ButtonArray_click(object sender, EventArgs e)
         {
             btn_sayac += 1;
@@ -168,7 +233,8 @@ namespace KarePuzzleOyunu
                 var temp_img = btn2.BackgroundImage;
                 btn2.BackgroundImage = btn1.BackgroundImage;
                 btn1.BackgroundImage = temp_img;
-
+                hamle++;
+                hmlsayisi.Text = hamle.ToString();
                 checkButton();
             }
         }
@@ -199,6 +265,15 @@ namespace KarePuzzleOyunu
             }
             if (sayac == 16)
             {
+
+                timer1.Stop(); //Oyun bitince sayacı durdurur
+
+
+                StreamWriter Yaz = new StreamWriter("C:\\Users\\rcp74\\Desktop\\KarePuzzleOyunu-master\\KarePuzzleOyunu\\enyuksekskor.txt", true); //Alınan puanı txt dosyasına yazar
+                Yaz.WriteLine(lblPuan.Text + " / " + lblNameSurname.Text + " / " + hmlsayisi.Text);
+
+                Yaz.Close();
+
                 MessageBox.Show("Tebrikler Oyun Bitti Puanınız: " + lblPuan.Text); //For döngüsü başarılı şekilde sonuçlanırsa oyun bitti demektir
             }
         }
@@ -223,6 +298,39 @@ namespace KarePuzzleOyunu
             FrmGirisEkrani frmGirisEkrani = new FrmGirisEkrani();
             frmGirisEkrani.Show();
             this.Hide();
+        }
+
+        int salise = 0;
+        int saniye = 0;
+        int dakika = 0;
+        int saat = 0;
+
+        private void timer1_Tick(object sender, EventArgs e) //Sayaç event i
+        {
+            salise++;
+            if (salise == 60)
+            {
+                salise = 0;
+                saniye++;
+            }
+
+            if (saniye == 60)
+            {
+                saniye = 0;
+                dakika++;
+            }
+
+
+            if (dakika == 60)
+            {
+                dakika = 0;
+                saat++;
+            }
+
+            lblSalise.Text = salise.ToString();
+            lblSaniye.Text = saniye.ToString();
+            lblDakika.Text = dakika.ToString();
+            lblSaat.Text = saat.ToString();
         }
     }
 }
