@@ -437,9 +437,9 @@ namespace KarePuzzleOyunu
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(12, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 25);
+            this.label7.Size = new System.Drawing.Size(75, 25);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Best Score:";
+            this.label7.Text = "Rekor:";
             // 
             // hmlsayisi
             // 
