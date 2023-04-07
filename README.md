@@ -66,7 +66,7 @@ Aldığı bu puan oyuncu adı ve hamle bilgisiyle birlikte txt dosyasına kayded
 ![alt text](https://github.com/Recep-Aksakakaloglu/KarePuzzleOyunu/blob/master/Oyun%20Ekran%C4%B1.PNG?raw=true)
 
 ## Yararlandığımız Kaynaklar
-* https://github.com/neslinbaydar/SQUARE-PUZZLE-GAME
+* https://stackoverflow.com/questions/45857304/clarify-what-select-does
 * https://stackoverflow.com/questions/13625891/cut-an-image-into-9-pieces-c-sharp
 * https://stackoverflow.com/questions/1922040/how-to-resize-an-image-c-sharp
 * https://stackoverflow.com/questions/3167971/how-can-i-transform-or-copy-an-array-to-a-linked-list
