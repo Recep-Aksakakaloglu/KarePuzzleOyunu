@@ -24,7 +24,7 @@ Proje konusu 4x4 bir kare puzzle oyunudur. Mause ile parça kontrolü yapılmakt
 * Double Linked Liste göre her düğüm, hem kendinden öncekine hem de kendinden sonrakine bağlanır, bu sayede liste üzerinde ileri ve geri ilerlemek mümkündür.
 
 ## Projenin Gerçekleştirilmesi
-* Projede iki adet form ekranı bulunmaktadır. Bunlar giriş ekranı ve oyun ekranıdır. Bu ekranlara gerekli konsepte uygun arkaplan resimleri ve Form komponentleriyle göze hoş gelen bir sayfa tasarımı oluşturuldu.
+Projede iki adet form ekranı bulunmaktadır. Bunlar giriş ekranı ve oyun ekranıdır. Bu ekranlara gerekli konsepte uygun arkaplan resimleri ve Form komponentleriyle göze hoş gelen bir sayfa tasarımı oluşturuldu.
 
 ### A. Giriş Ekranı
 * Giriş ekranı label, textbox, ve butonlar ile oluşturulmuştur. Sayfanın amacı textboxa kullanıcı adı girip buton ile sayfalar arası geçiş yapmaktır. Üzerine puzzle görseli eklediğimiz buton onclick eventi ile giriş ekranına geçiş yapılmaktadır. Burada önemli olan nokta if else koşulu ile text boxa boş alan kontrolü eklenmiştir ve eğer isim alanı boş bırakılırsa bu konuda uyarı veren bir messageBox görünmektedir.
